@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddPostActivity">
+
+    <RelativeLayout
+        android:id="@+id/AddImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/AddImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_image"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+        <TextView
+            android:id="@+id/clickHereTV"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click Here to add image"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/AddTitleET"
+        android:layout_below="@id/AddImageLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/black"
+        android:hint="@string/enter_title_label"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/AddDescriptionET"
+        android:layout_below="@id/AddTitleET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/black"
+        android:hint="@string/enter_description_label"
+        android:layout_marginLeft="8dp"
+        android:inputType="textMultiLine"
+        android:layout_marginRight="8dp" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:text="@string/submit_label"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/UploadingProgressbar"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
